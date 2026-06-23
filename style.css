@@ -57,19 +57,31 @@ button:hover {
     font-size: 18px;
 }
 
-/* Mobile */
 @media (max-width: 600px) {
+
+    body {
+        padding: 10px;
+    }
+
     .container {
-        width: 95%;
-        padding: 35px;
+        width: 100%;
+        max-width: none;
+        padding: 30px 20px;
+        border-radius: 12px;
     }
 
     h1 {
-        font-size: 2.4rem;
+        font-size: 2.2rem;
+        margin-bottom: 25px;
     }
-}
 
-    h1 {
-        font-size: 2rem;
+    input {
+        padding: 16px;
+        font-size: 18px;
+    }
+
+    button {
+        padding: 16px;
+        font-size: 18px;
     }
 }
