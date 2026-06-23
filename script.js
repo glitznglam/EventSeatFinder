@@ -7,28 +7,72 @@ const guests = [
   { name: "Maya Johnson", table: "6" }
 ];
 
-// Populate autocomplete list
-const datalist = document.getElementById("guestSuggestions");
+const input = document.getElementById("guestName");
+const suggestionsBox = document.getElementById("suggestions");
 
-guests.forEach(guest => {
-    const option = document.createElement("option");
-    option.value = guest.name;
-    datalist.appendChild(option);
+input.addEventListener("input", function () {
+
+    const searchText = input.value.toLowerCase();
+
+    suggestionsBox.innerHTML = "";
+
+    if (searchText.length === 0) {
+        suggestionsBox.style.display = "none";
+        return;
+    }
+
+    const matches = guests.filter(guest =>
+        guest.name.toLowerCase().includes(searchText)
+    );
+
+    if (matches.length === 0) {
+        suggestionsBox.style.display = "none";
+        return;
+    }
+
+    matches.forEach(guest => {
+
+        const item = document.createElement("div");
+
+        item.textContent = guest.name;
+
+        item.addEventListener("click", function () {
+            input.value = guest.name;
+            suggestionsBox.style.display = "none";
+        });
+
+        suggestionsBox.appendChild(item);
+
+    });
+
+    suggestionsBox.style.display = "block";
+});
+
+document.addEventListener("click", function (e) {
+
+    if (!e.target.closest(".search-container")) {
+        suggestionsBox.style.display = "none";
+    }
+
 });
 
 function findSeat() {
 
-    const name = document.getElementById("guestName").value;
+    const name = input.value;
 
     const guest = guests.find(
         g => g.name.toLowerCase() === name.toLowerCase()
     );
 
     if (guest) {
+
         document.getElementById("result").innerHTML =
             "You are seated at Table " + guest.table;
+
     } else {
+
         document.getElementById("result").innerHTML =
             "Guest not found";
+
     }
 }
