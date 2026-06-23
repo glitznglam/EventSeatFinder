@@ -14,8 +14,12 @@
     <h1>Find Your Seat</h1>
 
     <input type="text"
-           id="guestName"
-           placeholder="Enter your name">
+       id="guestName"
+       list="guestSuggestions"
+       placeholder="Enter your name">
+
+    <datalist id="guestSuggestions">
+    </datalist>
 
     <button onclick="findSeat()">
         Find Table
