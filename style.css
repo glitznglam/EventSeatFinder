@@ -12,9 +12,9 @@ body {
 
 .container {
     background: white;
-    width: 100%;
-    max-width: 450px;
-    padding: 35px;
+    width: 95%;
+    max-width: 550px;
+    padding: 40px;
     border-radius: 15px;
     box-shadow: 0 5px 20px rgba(0,0,0,0.1);
     text-align: center;
@@ -22,30 +22,29 @@ body {
 }
 
 h1 {
-    margin-bottom: 25px;
-    font-size: 2.5rem;
+    margin-bottom: 30px;
+    font-size: 3rem;
 }
 
 input {
     width: 100%;
-    padding: 14px;
-    margin-bottom: 15px;
+    padding: 18px;
+    margin-bottom: 18px;
     border: 1px solid #ccc;
     border-radius: 6px;
     box-sizing: border-box;
-    font-size: 16px;
+    font-size: 18px;
 }
 
 button {
     width: 100%;
-    padding: 14px;
+    padding: 18px;
     background: #0f1d35;
     color: white;
     border: none;
     border-radius: 6px;
     cursor: pointer;
-    font-size: 16px;
-    transition: 0.2s;
+    font-size: 18px;
 }
 
 button:hover {
@@ -61,9 +60,14 @@ button:hover {
 /* Mobile */
 @media (max-width: 600px) {
     .container {
-        padding: 25px;
-        max-width: 95%;
+        width: 95%;
+        padding: 35px;
     }
+
+    h1 {
+        font-size: 2.4rem;
+    }
+}
 
     h1 {
         font-size: 2rem;
