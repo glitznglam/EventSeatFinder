@@ -85,3 +85,32 @@ button:hover {
         font-size: 18px;
     }
 }
+
+.search-container {
+    position: relative;
+    width: 100%;
+}
+
+.suggestions-box {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    border: 1px solid #ddd;
+    border-top: none;
+    max-height: 250px;
+    overflow-y: auto;
+    z-index: 1000;
+    display: none;
+    text-align: left;
+}
+
+.suggestions-box div {
+    padding: 14px;
+    cursor: pointer;
+}
+
+.suggestions-box div:hover {
+    background: #f3f3f3;
+}
