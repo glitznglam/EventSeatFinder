@@ -13,13 +13,16 @@
 
     <h1>Find Your Seat</h1>
 
-    <input type="text"
-       id="guestName"
-       list="guestSuggestions"
-       placeholder="Enter your name">
+    <div class="search-container">
 
-    <datalist id="guestSuggestions">
-    </datalist>
+    <input type="text"
+           id="guestName"
+           placeholder="Enter your name"
+           autocomplete="off">
+
+    <div id="suggestions" class="suggestions-box"></div>
+
+</div>
 
     <button onclick="findSeat()">
         Find Table
