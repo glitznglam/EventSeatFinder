@@ -58,7 +58,7 @@ document.addEventListener("click", function (e) {
 
 function findSeat() {
 
-    const name = input.value;
+    const name = input.value.trim();
 
     const guest = guests.find(
         g => g.name.toLowerCase() === name.toLowerCase()
@@ -66,13 +66,29 @@ function findSeat() {
 
     if (guest) {
 
-        document.getElementById("result").innerHTML =
+        document.querySelector(".container").style.display = "none";
+
+        document.getElementById("resultCard").style.display = "block";
+
+        document.getElementById("guestDisplay").innerHTML =
+            guest.name;
+
+        document.getElementById("tableDisplay").innerHTML =
             "You are seated at Table " + guest.table;
 
     } else {
 
-        document.getElementById("result").innerHTML =
-            "Guest not found";
+        alert("Guest not found");
 
     }
+}
+
+function closeResult() {
+
+    document.getElementById("resultCard").style.display = "none";
+
+    document.querySelector(".container").style.display = "block";
+
+    document.getElementById("guestName").value = "";
+
 }
