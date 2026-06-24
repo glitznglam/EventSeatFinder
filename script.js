@@ -106,13 +106,10 @@ function findSeat() {
 
 function closeResult() {
 
-    document.getElementById("resultCard").style.display =
-        "none";
+    document.getElementById("resultCard").style.display = "none";
 
-    document.querySelector(".container").style.display =
-        "block";
+    document.querySelector(".container").style.display = "block";
 
-    input.value = "";
+    alert("Close button clicked");
 
-    suggestionsBox.style.display = "none";
 }
