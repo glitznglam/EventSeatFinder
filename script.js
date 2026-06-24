@@ -85,6 +85,8 @@ function findSeat() {
 
     if (guest) {
 
+        document.querySelector(".container").style.display = "none";
+        
         document.getElementById("guestDisplay").innerHTML =
             guest.name;
 
