@@ -165,3 +165,16 @@ button:hover {
     display: block;
     border-radius: 10px;
 }
+
+#eventName {
+    margin-bottom: 5px;
+    font-size: 1.8rem;
+    color: #0f1d35;
+}
+
+#venueName {
+    margin-top: 0;
+    margin-bottom: 25px;
+    color: #666;
+    font-size: 1rem;
+}
