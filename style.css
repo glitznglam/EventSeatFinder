@@ -115,3 +115,45 @@ button:hover {
 .suggestions-box div:hover {
     background: #f5f5f5;
 }
+
+.result-card {
+    background: white;
+    width: 95%;
+    max-width: 550px;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    text-align: center;
+    box-sizing: border-box;
+}
+
+#guestDisplay {
+    margin: 25px 0;
+    padding: 18px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 28px;
+}
+
+#tableDisplay {
+    margin: 25px 0;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+@media (max-width: 600px) {
+
+    .result-card {
+        width: 100%;
+        max-width: none;
+        padding: 30px 20px;
+    }
+
+    #guestDisplay {
+        font-size: 22px;
+    }
+
+    #tableDisplay {
+        font-size: 20px;
+    }
+}
