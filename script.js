@@ -84,9 +84,7 @@ function findSeat() {
     );
 
     if (guest) {
-
-        document.querySelector(".container").style.display = "none";
-        
+            
         document.getElementById("guestDisplay").innerHTML =
             guest.name;
 
@@ -96,8 +94,11 @@ function findSeat() {
         document.querySelector(".search-container").style.display =
             "none";
 
+        document.querySelector(".container").style.display =
+            "none";
+
         document.getElementById("resultCard").style.display =
-            "block";
+    "block";
 
     } else {
 
@@ -111,9 +112,8 @@ function closeResult() {
     document.getElementById("resultCard").style.display =
         "none";
 
-    document.querySelector(".search-container").style.display =
+    document.querySelector(".container").style.display =
         "block";
 
     input.value = "";
-
 }
