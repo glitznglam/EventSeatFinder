@@ -110,6 +110,11 @@ function closeResult() {
 
     document.querySelector(".container").style.display = "block";
 
-    alert("Close button clicked");
+    input.value = "";
 
+    document.getElementById("result").innerHTML = "";
+
+    suggestionsBox.innerHTML = "";
+
+    suggestionsBox.style.display = "none";
 }
