@@ -86,19 +86,16 @@ function findSeat() {
     if (guest) {
             
         document.getElementById("guestDisplay").innerHTML =
-            guest.name;
+        guest.name;
 
-        document.getElementById("tableDisplay").innerHTML =
-            "You are seated at Table " + guest.table;
+    document.getElementById("tableDisplay").innerHTML =
+        "You are seated at Table " + guest.table;
 
-        document.querySelector(".search-container").style.display =
-            "none";
+    document.querySelector(".container").style.display =
+        "none";
 
-        document.querySelector(".container").style.display =
-            "none";
-
-        document.getElementById("resultCard").style.display =
-    "block";
+    document.getElementById("resultCard").style.display =
+        "block";
 
     } else {
 
@@ -116,4 +113,6 @@ function closeResult() {
         "block";
 
     input.value = "";
+
+    suggestionsBox.style.display = "none";
 }
