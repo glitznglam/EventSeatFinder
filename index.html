@@ -9,30 +9,47 @@
 
 <body>
 
-<div class="container">
+    <!-- SEARCH SCREEN -->
+    <div class="container">
 
-    <h1>Find Your Seat</h1>
+        <h1>Find Your Seat</h1>
 
-    <div class="search-container">
+        <div class="search-container">
 
-    <input type="text"
-           id="guestName"
-           placeholder="Enter your name"
-           autocomplete="off">
+            <input
+                type="text"
+                id="guestName"
+                placeholder="Enter your name"
+                autocomplete="off">
 
-    <div id="suggestions" class="suggestions-box"></div>
+            <div id="suggestions" class="suggestions-box"></div>
 
-</div>
+        </div>
 
-    <button onclick="findSeat()">
-        Find Table
-    </button>
+        <button onclick="findSeat()">
+            Find Table
+        </button>
 
-    <p id="result"></p>
+        <p id="result"></p>
 
-</div>
+    </div>
 
-<script src="script.js"></script>
+    <!-- RESULT SCREEN -->
+    <div id="resultCard" class="result-card" style="display:none;">
+
+        <h1>Your Seat Awaits</h1>
+
+        <div id="guestDisplay"></div>
+
+        <p id="tableDisplay"></p>
+
+        <button onclick="closeResult()">
+            Close
+        </button>
+
+    </div>
+
+    <script src="script.js"></script>
 
 </body>
 </html>
