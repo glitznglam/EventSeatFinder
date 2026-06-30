@@ -119,6 +119,48 @@ function closeResult() {
     suggestionsBox.style.display = "none";
 }
 
+function loadSettings() {
+
+    const settingsUrl =
+        `https://docs.google.com/spreadsheets/d/${sheetID}/gviz/tq?sheet=Settings&tqx=out:json`;
+
+    fetch(settingsUrl)
+    .then(response => response.text())
+    .then(data => {
+
+        const json = JSON.parse(
+            data.substring(47).slice(0, -2)
+        );
+
+        const rows = json.table.rows;
+
+        let settings = {};
+
+        rows.forEach(row => {
+
+            const key = row.c[0]?.v;
+            const value = row.c[1]?.v;
+
+            if (key && value) {
+                settings[key] = value;
+            }
+
+        });
+
+        document.getElementById("eventName").innerText =
+            settings["Event Name"] || "Find Your Seat";
+
+        document.getElementById("venueName").innerText =
+            settings["Venue"] || "";
+
+    })
+    .catch(error => {
+        console.error("Settings loading error:", error);
+    });
+
+}
+
+
 function openFloorPlan() {
     document.getElementById("imageModal").style.display = "flex";
 }
