@@ -118,3 +118,17 @@ function closeResult() {
 
     suggestionsBox.style.display = "none";
 }
+
+function openFloorPlan() {
+
+    document.getElementById("imageModal").style.display =
+        "block";
+
+}
+
+function closeFloorPlan() {
+
+    document.getElementById("imageModal").style.display =
+        "none";
+
+}
