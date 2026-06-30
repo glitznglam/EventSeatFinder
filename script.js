@@ -121,6 +121,8 @@ function closeResult() {
 
 function openFloorPlan() {
 
+    alert("Image clicked");
+
     document.getElementById("imageModal").style.display =
         "block";
 
