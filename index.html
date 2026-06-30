@@ -56,7 +56,13 @@
      alt="Floor Plan"
      onclick="openFloorPlan()">
 
-<div id="imageModal" class="image-modal">
+    <button onclick="closeResult()">
+        Close
+    </button>
+
+</div>
+
+    <div id="imageModal" class="image-modal">
     <span class="close-image" onclick="closeFloorPlan()">
         &times;
     </span>
@@ -65,13 +71,7 @@
          src="floorplan.jpg"
          alt="Floor Plan">
 </div>
-
-    <button onclick="closeResult()">
-        Close
-    </button>
-
-</div>
-
+    
     <script src="script.js"> </script>
 
 </body>
