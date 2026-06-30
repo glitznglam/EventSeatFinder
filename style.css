@@ -178,3 +178,34 @@ button:hover {
     color: #666;
     font-size: 1rem;
 }
+
+.image-modal {
+    display: none;
+    position: fixed;
+    z-index: 99999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+}
+
+#fullFloorPlan {
+    display: block;
+    max-width: 95%;
+    max-height: 90%;
+    margin: 2% auto;
+}
+
+.close-image {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: white;
+    font-size: 50px;
+    cursor: pointer;
+}
+
+#floorPlanImage {
+    cursor: pointer;
+}
