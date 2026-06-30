@@ -120,14 +120,9 @@ function closeResult() {
 }
 
 function openFloorPlan() {
-
-    document.getElementById("imageModal").style.display =
-        "block";
+    document.getElementById("imageModal").style.display = "flex";
 }
 
 function closeFloorPlan() {
-
-    document.getElementById("imageModal").style.display =
-        "none";
-
+    document.getElementById("imageModal").style.display = "none";
 }
