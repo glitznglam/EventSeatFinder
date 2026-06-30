@@ -51,9 +51,20 @@
 
     <p id="tableDisplay"></p>
 
-    <img id="floorPlanImage"
+   <img id="floorPlanImage"
+     src="floorplan.jpg"
+     alt="Floor Plan"
+     onclick="openFloorPlan()">
+
+<div id="imageModal" class="image-modal">
+    <span class="close-image" onclick="closeFloorPlan()">
+        &times;
+    </span>
+
+    <img id="fullFloorPlan"
          src="floorplan.jpg"
          alt="Floor Plan">
+</div>
 
     <button onclick="closeResult()">
         Close
