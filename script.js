@@ -160,9 +160,7 @@ function loadSettings() {
 
   }
 
-  loadSettings();
-
-
+ 
 function openFloorPlan() {
     document.getElementById("imageModal").style.display = "flex";
 }
@@ -170,3 +168,5 @@ function openFloorPlan() {
 function closeFloorPlan() {
     document.getElementById("imageModal").style.display = "none";
 }
+
+ loadSettings();
