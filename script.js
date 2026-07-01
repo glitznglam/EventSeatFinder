@@ -133,11 +133,13 @@ function loadSettings() {
         );
 
         const rows = json.table.rows;
+        console.log(rows);
 
         let settings = {};
 
         rows.forEach(row => {
-
+        console.log(row);
+            
             const key = row.c[0]?.v;
             const value = row.c[1]?.v;
 
