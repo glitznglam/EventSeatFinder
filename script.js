@@ -149,11 +149,14 @@ function loadSettings() {
 
         });
 
-        document.getElementById("eventName").innerText =
-            settings["Event Name"] || "Find Your Seat";
+        console.log(settings);
 
-        document.getElementById("venueName").innerText =
-            settings["Venue"] || "";
+document.getElementById("eventName").innerText =
+    JSON.stringify(settings);
+
+document.getElementById("venueName").innerText =
+    "Loaded";
+        
 
     })
     .catch(error => {
