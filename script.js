@@ -158,8 +158,9 @@ function loadSettings() {
         console.error("Settings loading error:", error);
     });
 
-    loadSettings();
-}
+  }
+
+  loadSettings();
 
 
 function openFloorPlan() {
