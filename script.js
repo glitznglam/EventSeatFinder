@@ -80,16 +80,22 @@ function loadSettings() {
         document.getElementById("eventDate").innerText =
             settings["Event Date"] || "";
 
+       document.getElementById("loadingScreen").style.display = "none";
+      document.querySelector(".container").style.display = "block";
+       
         /* SHOW PAGE ONLY AFTER DATA LOADS */
         document.querySelector(".container").style.display = "block";
 
     })
     .catch(error => {
-        console.error("Settings loading error:", error);
 
-        /* still show page if settings fail */
-        document.querySelector(".container").style.display = "block";
-    });
+    console.error("Settings loading error:", error);
+
+    document.getElementById("loadingScreen").style.display = "none";
+
+    document.querySelector(".container").style.display = "block";
+
+   });
 
 }
 
