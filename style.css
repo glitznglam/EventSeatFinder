@@ -219,3 +219,9 @@ button:hover {
     color: #777;
     font-size: 0.95rem;
 }
+
+#eventName,
+#venueName,
+#eventDate {
+    visibility: hidden;
+}
