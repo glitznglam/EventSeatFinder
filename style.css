@@ -221,3 +221,15 @@ button:hover {
     font-size: 0.95rem;
 }
 
+#loadingScreen {
+    background: white;
+    width: 95%;
+    max-width: 550px;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    color: #0f1d35;
+}
