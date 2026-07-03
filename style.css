@@ -19,6 +19,8 @@ body {
     box-shadow: 0 5px 20px rgba(0,0,0,0.1);
     text-align: center;
     box-sizing: border-box;
+
+    visibility: hidden;
 }
 
 h1 {
@@ -220,8 +222,3 @@ button:hover {
     font-size: 0.95rem;
 }
 
-#eventName,
-#venueName,
-#eventDate {
-    visibility: hidden;
-}
