@@ -212,3 +212,10 @@ button:hover {
 #floorPlanImage {
     cursor: pointer;
 }
+
+#eventDate {
+    margin-top: 5px;
+    margin-bottom: 25px;
+    color: #777;
+    font-size: 0.95rem;
+}
