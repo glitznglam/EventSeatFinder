@@ -138,7 +138,7 @@ function loadSettings() {
         let settings = {};
 
         rows.forEach(row => {
-        console.log(row);
+        console.log(JSON.stringify(rows, null, 2));
             
             const key = row.c[0]?.v;
             const value = row.c[1]?.v;
@@ -152,7 +152,7 @@ function loadSettings() {
         console.log(settings);
 
 document.getElementById("eventName").innerText =
-    JSON.stringify(settings);
+    "Check Console";
 
 document.getElementById("venueName").innerText =
     "Loaded";
