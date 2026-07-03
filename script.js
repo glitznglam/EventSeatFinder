@@ -34,6 +34,7 @@ fetch(guestsUrl)
     console.error("Guest loading error:", error);
 });
 
+
 /* ---------------------------
    LOAD SETTINGS
 ---------------------------- */
@@ -71,23 +72,27 @@ function loadSettings() {
         console.log("Settings:", settings);
 
         document.getElementById("eventName").innerText =
-             settings["Event Name"] || "Find Your Seat";
+            settings["Event Name"] || "Find Your Seat";
 
-         document.getElementById("venueName").innerText =
-             settings["Venue"] || "";
+        document.getElementById("venueName").innerText =
+            settings["Venue"] || "";
 
-         document.getElementById("eventDate").innerText =
-             settings["Event Date"] || "";
+        document.getElementById("eventDate").innerText =
+            settings["Event Date"] || "";
 
-          // SHOW THE CARD AFTER EVERYTHING IS LOADED
-         document.querySelector(".container").style.visibility = "visible";
-       
+        /* SHOW PAGE ONLY AFTER DATA LOADS */
+        document.querySelector(".container").style.display = "block";
+
     })
     .catch(error => {
         console.error("Settings loading error:", error);
+
+        /* still show page if settings fail */
+        document.querySelector(".container").style.display = "block";
     });
 
 }
+
 
 /* ---------------------------
    AUTOCOMPLETE
@@ -138,6 +143,7 @@ input.addEventListener("input", function () {
 
 });
 
+
 document.addEventListener("click", function (e) {
 
     if (!e.target.closest(".search-container")) {
@@ -147,6 +153,7 @@ document.addEventListener("click", function (e) {
     }
 
 });
+
 
 /* ---------------------------
    FIND SEAT
@@ -182,6 +189,7 @@ function findSeat() {
 
 }
 
+
 /* ---------------------------
    CLOSE RESULT
 ---------------------------- */
@@ -202,6 +210,7 @@ function closeResult() {
 
 }
 
+
 /* ---------------------------
    FLOOR PLAN POPUP
 ---------------------------- */
@@ -219,6 +228,7 @@ function closeFloorPlan() {
         "none";
 
 }
+
 
 /* ---------------------------
    START
