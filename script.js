@@ -71,10 +71,13 @@ function loadSettings() {
         console.log("Settings:", settings);
 
         document.getElementById("eventName").innerText =
-            settings["Event Name"] || "Find Your Seat";
+             settings["Event Name"] || "Find Your Seat";
 
-        document.getElementById("venueName").innerText =
-            settings["Venue"] || "";
+      document.getElementById("venueName").innerText =
+             settings["Venue"] || "";
+
+      document.getElementById("eventDate").innerText =
+             settings["Event Date"] || "";
 
     })
     .catch(error => {
