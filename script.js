@@ -6,7 +6,7 @@ const suggestionsBox = document.getElementById("suggestions");
 const sheetID = "18vHPjaoOreO1j6DnmZ9VYWS4q0p387HmrpqvmYUkTbU";
 
 const url =
-https://docs.google.com/spreadsheets/d/18vHPjaoOreO1j6DnmZ9VYWS4q0p387HmrpqvmYUkTbU/gviz/tq?sheet=Settings&tqx=out:json;
+'https://docs.google.com/spreadsheets/d/18vHPjaoOreO1j6DnmZ9VYWS4q0p387HmrpqvmYUkTbU/gviz/tq?sheet=Settings&tqx=out:json';
 
 fetch(url)
 .then(response => response.text())
