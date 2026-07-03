@@ -41,7 +41,7 @@ fetch(guestsUrl)
 function loadSettings() {
 
     const settingsUrl =
-    `https://docs.google.com/spreadsheets/d/${sheetID}/gviz/tq?sheet=Settings&tqx=out:json`;
+`https://docs.google.com/spreadsheets/d/${sheetID}/gviz/tq?sheet=Settings&headers=1&tqx=out:json`;
 
     fetch(settingsUrl)
     .then(response => response.text())
