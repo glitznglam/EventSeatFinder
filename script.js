@@ -79,9 +79,8 @@ function loadSettings() {
          document.getElementById("eventDate").innerText =
              settings["Event Date"] || "";
 
-         document.getElementById("eventName").style.visibility = "visible";
-         document.getElementById("venueName").style.visibility = "visible";
-         document.getElementById("eventDate").style.visibility = "visible";
+          // SHOW THE CARD AFTER EVERYTHING IS LOADED
+         document.querySelector(".container").style.visibility = "visible";
        
     })
     .catch(error => {
