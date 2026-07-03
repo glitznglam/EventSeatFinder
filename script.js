@@ -73,12 +73,16 @@ function loadSettings() {
         document.getElementById("eventName").innerText =
              settings["Event Name"] || "Find Your Seat";
 
-      document.getElementById("venueName").innerText =
+         document.getElementById("venueName").innerText =
              settings["Venue"] || "";
 
-      document.getElementById("eventDate").innerText =
+         document.getElementById("eventDate").innerText =
              settings["Event Date"] || "";
 
+         document.getElementById("eventName").style.visibility = "visible";
+         document.getElementById("venueName").style.visibility = "visible";
+         document.getElementById("eventDate").style.visibility = "visible";
+       
     })
     .catch(error => {
         console.error("Settings loading error:", error);
