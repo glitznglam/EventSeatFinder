@@ -179,8 +179,8 @@ function findSeat() {
             guest.name;
 
         document.getElementById("tableDisplay").innerHTML =
-            "You are seated at Table " + guest.table;
-
+            "You are seated at:<br><strong>" + guest.table + "</strong>";
+       
         document.querySelector(".container").style.display =
             "none";
 
