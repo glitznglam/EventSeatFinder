@@ -108,6 +108,8 @@ input.addEventListener("input", function () {
 
     const searchText = input.value.toLowerCase();
 
+    document.getElementById("errorMessage").style.display = "none";
+
     suggestionsBox.innerHTML = "";
 
     if (searchText.length === 0) {
