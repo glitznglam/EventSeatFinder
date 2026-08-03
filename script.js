@@ -169,16 +169,28 @@ document.addEventListener("click", function (e) {
 
 function findSeat() {
 
+    const errorBox = document.getElementById("errorMessage");
+
     // Hide any previous error message
-    document.getElementById("errorMessage").style.display = "none";
+    errorBox.style.display = "none";
 
     const name = input.value.trim();
+
+    // No name entered
+    if (name === "") {
+
+        errorBox.innerHTML =
+            "<strong>Please enter your name.</strong>";
+
+        errorBox.style.display = "block";
+
+        return;
+    }
 
     const guest = guests.find(
         g => g.name.toLowerCase() === name.toLowerCase()
     );
 
-   
     if (guest) {
 
         document.getElementById("guestDisplay").innerHTML =
@@ -186,7 +198,7 @@ function findSeat() {
 
         document.getElementById("tableDisplay").innerHTML =
             "You are seated at:<br><strong>" + guest.table + "</strong>";
-       
+
         document.querySelector(".container").style.display =
             "none";
 
@@ -195,12 +207,11 @@ function findSeat() {
 
     } else {
 
-        const errorBox = document.getElementById("errorMessage");
+        errorBox.innerHTML =
+            "<strong>Guest not found.</strong><br>Please check the spelling or contact the event host.";
 
-         errorBox.innerHTML =
-             "<strong>Guest not found.</strong><br>Please check the spelling or contact the event host.";
+        errorBox.style.display = "block";
 
-         errorBox.style.display = "block";
     }
 
 }
