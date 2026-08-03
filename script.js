@@ -167,12 +167,16 @@ document.addEventListener("click", function (e) {
 
 function findSeat() {
 
+    // Hide any previous error message
+    document.getElementById("errorMessage").style.display = "none";
+
     const name = input.value.trim();
 
     const guest = guests.find(
         g => g.name.toLowerCase() === name.toLowerCase()
     );
 
+   
     if (guest) {
 
         document.getElementById("guestDisplay").innerHTML =
@@ -189,8 +193,12 @@ function findSeat() {
 
     } else {
 
-        alert("Guest not found");
+        const errorBox = document.getElementById("errorMessage");
 
+         errorBox.innerHTML =
+             "<strong>Guest not found.</strong><br>Please check the spelling or contact the event host.";
+
+         errorBox.style.display = "block";
     }
 
 }
